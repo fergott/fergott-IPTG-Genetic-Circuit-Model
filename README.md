@@ -31,3 +31,7 @@ figures/ours_vs_authors.png: our parameters against the authors', with a dashed 
 A printed summary (mean ± sd across barcodes) of each parameter and the mean ours/authors ratio.
 
 
+TO DO: 
+Build a dynamic ODE model 
+Compose a genetic circuit
+
