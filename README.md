@@ -14,7 +14,7 @@ What it does
 
 EC50 within 1% of published values across 15 barcodes.
 
-
+G0 differed from the published value by 0.36 log10 units, which is within the authors’ own posterior uncertainty (1 sd = 0.45), reflecting the low signal-to-noise of the zero-inducer measurements.
 
 
 Requirements
