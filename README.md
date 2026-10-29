@@ -14,8 +14,17 @@ What it does
 
 EC50 within 1% of published values across 15 barcodes.
 
-G0 differed from the published value by 0.36 log10 units, which is within the authors’ own posterior uncertainty (1 sd = 0.45), reflecting the low signal-to-noise of the zero-inducer measurements.
+## Note on G0
 
+G0 (basal expression with no IPTG) is the one parameter that does not match the authors' values closely (mean ratio ours/authors = 0.43), while Ginf, EC50 and n agree to within about 4%.
+
+This reflects how poorly the zero-inducer region is measured, not a fitting error:
+
+- The GP posterior at 0 IPTG is very uncertain: the 5-95% range gives sd ≈ 0.54 log10 units (error bars of roughly ±0.5 in `figures/wt_curves_fits.png`).
+- The authors' own posterior uncertainty on log10(G0) is ≈ 0.45 (1 sd), larger than the 0.36 log10 difference between our G0 and theirs.
+- Our fit follows the data: the GP median at 0 IPTG is ≈ 331, our fitted G0 is ≈ 271 (0.09 log10 units lower), while the authors' value is ≈ 625 (0.28 log10 units higher).
+
+Because the fit is weighted by 1/sd, the noisy zero-IPTG point contributes little, so G0 is the least constrained Hill parameter. Ginf, EC50 and n are set by well-measured points and agree closely.
 
 Requirements
 Python 3, numpy, pandas, matplotlib, lmfit, and tables (needed by pandas.read_hdf).
